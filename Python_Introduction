@@ -1,0 +1,46 @@
+
+# This is a comment.
+first = "Hello World"
+
+print("I AM A COMPUTER!")
+
+if 1 < 2 and 4 > 2:
+    print("Math is fun.")
+
+nope = None
+
+true_and_false = True and False
+
+length_of_string = len("What's my length?")
+
+uppercase_string = "i am shouting".upper()
+
+number_from_string = int("1000")
+
+combined_string = str(4) + "real"
+
+output_cool = 3 * "cool"
+
+try:
+    division_by_zero = 1 / 0
+except ZeroDivisionError:
+    division_by_zero = "Infinity"
+
+type_of_list = type([])
+
+name = input("What is your name? ")
+
+number = float(input("Enter a number: "))
+if number < 0:
+    print("That number is less than 0!")
+elif number > 0:
+    print("That number is greater than 0!")
+else:
+    print("You picked 0!")
+
+index_of_l = "apple".index("l")
+
+is_y_in_xylophone = "y" in "xylophone"
+
+my_string = "example"  # Assign your string here
+is_all_lowercase = my_string.islower()

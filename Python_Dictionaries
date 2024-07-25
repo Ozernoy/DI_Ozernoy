@@ -1,0 +1,24 @@
+#1
+list1 = [("name", "Elie"), ("job", "Instructor")]
+dict1 = {key: value for key, value in list1}
+print(dict1)
+
+#2
+list2 = ["CA", "NJ", "RI"]
+list3 = ["California", "New Jersey", "Rhode Island"]
+dict2 = {abbr: state for abbr, state in zip(list2, list3)}
+print(dict2)
+
+#3
+vowels = 'aeiou'
+dict3 = {vowel: 0 for vowel in vowels}
+print(dict3)
+
+#4
+dict4 = {i + 1: chr(65 + i) for i in range(26)}
+print(dict4)
+
+# Super Bonus
+string = "awesome sauce"
+dict5 = {vowel: string.count(vowel) for vowel in 'aeiou'}
+print(dict5)

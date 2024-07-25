@@ -1,0 +1,53 @@
+#1
+list1 = [1, 2, 3, 4]
+for value in list1:
+    print(value)
+
+#2
+list2 = [1, 2, 3, 4]
+for value in list2:
+    print(value * 20)
+
+#3
+names = ["Elie", "Tim", "Matt"]
+first_letters = [name[0] for name in names]
+print(first_letters)
+
+#4
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = [num for num in numbers if num % 2 == 0]
+print(even_numbers)
+
+#5
+list3 = [1, 2, 3, 4]
+list4 = [3, 4, 5, 6]
+intersection = [num for num in list3 if num in list4]
+print(intersection)
+
+#6
+words = ["Elie", "Tim", "Matt"]
+reversed_words = [word[::-1].lower() for word in words]
+print(reversed_words)
+
+#7
+string1 = "first"
+string2 = "third"
+common_letters = list(set(string1) & set(string2))
+print(common_letters)
+
+#8
+divisible_by_12 = [num for num in range(1, 101) if num % 12 == 0]
+print(divisible_by_12)
+
+#9
+string3 = "amazing"
+no_vowels = [char for char in string3 if char not in 'aeiou']
+print(no_vowels)
+
+#10
+list_of_lists1 = [[i for i in range(3)] for _ in range(3)]
+print(list_of_lists1)
+
+#11
+list_of_lists2 = [[i for i in range(10)] for _ in range(10)]
+print(list_of_lists2)

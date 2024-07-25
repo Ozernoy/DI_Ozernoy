@@ -1,0 +1,98 @@
+def difference(a, b):
+    return a - b
+
+def print_day(number):
+    days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    if 1 <= number <= 7:
+        return days[number - 1]
+    return None
+
+def last_element(lst):
+    if lst:
+        return lst[-1]
+    return None
+
+def number_compare(a, b):
+    if a > b:
+        return "First is greater."
+    elif b > a:
+        return "Second is greater."
+    return "Numbers are equal."
+
+def single_letter_count(word, letter):
+    return word.lower().count(letter.lower())
+
+def multiple_letter_count(string):
+    return {char: string.count(char) for char in string}
+
+def list_manipulation(lst, command, location, value=None):
+    if command == "remove":
+        if location == "end":
+            return lst.pop()
+        elif location == "beginning":
+            return lst.pop(0)
+    elif command == "add":
+        if location == "end":
+            lst.append(value)
+            return lst
+        elif location == "beginning":
+            lst.insert(0, value)
+            return lst
+
+def is_palindrome(s):
+    s = ''.join(char.lower() for char in s if char.isalnum())
+    return s == s[::-1]
+
+def frequency(lst, search_term):
+    return lst.count(search_term)
+
+def flip_case(string, letter):
+    return ''.join(char.swapcase() if char.lower() == letter.lower() else char for char in string)
+
+def multiply_even_numbers(lst):
+    product = 1
+    for num in lst:
+        if num % 2 == 0:
+            product *= num
+    return product
+
+from collections import Counter
+
+def mode(lst):
+    counter = Counter(lst)
+    return counter.most_common(1)[0][0]
+
+def capitalize(string):
+    return string.capitalize()
+
+def compact(lst):
+    return [item for item in lst if item]
+
+def partition(lst, callback):
+    truthy = [item for item in lst if callback(item)]
+    falsy = [item for item in lst if not callback(item)]
+    return [truthy, falsy]
+
+def intersection(lst1, lst2):
+    return [item for item in lst1 if item in lst2]
+
+def once(func):
+    def inner(*args, **kwargs):
+        if not inner.has_run:
+            inner.has_run = True
+            return func(*args, **kwargs)
+    inner.has_run = False
+    return inner
+
+# Super Bonus
+def run_once(func):
+    def inner(*args, **kwargs):
+        if not inner.has_run:
+            inner.has_run = True
+            return func(*args, **kwargs)
+    inner.has_run = False
+    return inner
+
+@run_once # the same as add = run_once(add)
+def add(a, b):
+    return a + b
